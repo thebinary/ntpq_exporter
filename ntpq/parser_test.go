@@ -95,4 +95,13 @@ processed for time:     12`
 			t.Error("failed to detect unknown key: nostat")
 		}
 	})
+
+	t.Run("detect invalid value", func(t *testing.T) {
+		cmdout := `uptime: 1
+nostat: nan`
+		_, err := parseNTPQSysStats(strings.NewReader(cmdout))
+		if err == nil {
+			t.Error("failed to detect invalid value for key: nostat")
+		}
+	})
 }

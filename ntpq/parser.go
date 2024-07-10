@@ -44,7 +44,8 @@ func parseNTPQSysStats(str io.Reader) (stats *NTPSysStats, err error) {
 
 		intVal, err = strconv.Atoi(value)
 		if err != nil {
-			return nil, errors.New(fmt.Sprintf("bad int value: '%s'", value))
+			return nil, errors.New(
+				fmt.Sprintf("bad value: '%s' for key: '%s'", value, key))
 		}
 
 		switch key {
