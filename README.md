@@ -7,4 +7,5 @@ Prometheus exporter for stats returned by ntpq
 ### Currently Supports:
 - sysstats
 
-[Grafana Dashboard](https://grafana.com/grafana/dashboards/21493-ntpq-stats/)
+![NTPq Stats](https://grafana.com/api/dashboards/21493/images/16656/image)
+[Grafana Dashboard Link](https://grafana.com/grafana/dashboards/21493-ntpq-stats/)
